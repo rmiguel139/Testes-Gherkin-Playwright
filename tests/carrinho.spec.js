@@ -1,0 +1,38 @@
+import { test, expect } from '@playwright/test';
+// faz o login antes de validar o carrinho de compras, adicionando um produto e verificando se ele foi adicionado corretamente  
+test.beforeEach(async ({ page }) => {
+  await page.goto('https://www.saucedemo.com');
+  await page.locator('[data-test="username"]').fill('standard_user');
+  await page.locator('[data-test="password"]').fill('secret_sauce');
+  await page.locator('[data-test="login-button"]').click();
+  await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+});
+
+// verifica se é possível adicionar um produto ao carrinho de compras e se o botão de remover aparece após a adição do produto
+test('verifica se é possível adicionar um produto ao carrinho', async ({ page }) => {
+  await page.goto('https://www.saucedemo.com/inventory.html');
+  await page.locator('button[data-test="add-to-cart-sauce-labs-backpack"]').click();
+  await page.locator('button[data-test="remove-sauce-labs-backpack"]').isVisible();
+  await page.locator('span[data-test="shopping-cart-badge"]').click();
+  await expect(page).toHaveURL('https://www.saucedemo.com/cart.html');
+});
+
+// verifica se o carrinho de compras contém um produto após a adição
+test('verifica se existe um produto no carrinho', async ({ page }) => {
+  await page.goto('https://www.saucedemo.com/cart.html');
+  await page.locator('div[data-test="inventory-item"]').isVisible();
+});
+
+// verifica se a página possui o botão de continuar comprando e se ele redireciona para a página de produtos
+test('verifica se a página possui o botão de continuar comprando e se ele redireciona para a página de produtos', async ({ page }) => {
+  await page.goto('https://www.saucedemo.com/cart.html');
+  await page.locator('button[data-test="continue-shopping"]').click();
+  await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+});
+
+// verifica se a página possui o botão de finalizar compra e se ele redireciona para a página de checkout
+test('verifica se a página possui o botão de finalizar compra e se ele redireciona para a página de checkout', async ({ page }) => {
+  await page.goto('https://www.saucedemo.com/cart.html');
+  await page.locator('button[data-test="checkout"]').click();
+  await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-one.html');
+});
