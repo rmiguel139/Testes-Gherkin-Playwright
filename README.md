@@ -4,7 +4,9 @@ Projeto de portfólio com casos de teste escritos em Gherkin e automatizados com
 
 O objetivo é demonstrar o processo completo de QA: da análise de requisitos e escrita dos cenários até a automação, execução e geração de relatórios.
 
+
 📌 Sumário
+
 Sobre o projeto
 Aplicação testada
 Tecnologias
@@ -16,27 +18,35 @@ Relatórios
 Boas práticas adotadas
 Próximos passos
 Autor
+
+
 🎯 Sobre o projeto
+
 
 Este repositório reúne:
 
 Cenários em Gherkin (.feature) que descrevem o comportamento esperado em linguagem natural (Dado / Quando / Então), legíveis para qualquer pessoa do time;
 Automação E2E com Playwright, com os passos implementados e organizados;
 
+
+
 🛒 Aplicação testada
 
 Nome: Swag Labs
-URL: [https://exemplo.com](https://www.saucedemo.com/)
+URL: [https://www.saucedemo.com/])
 Fluxos cobertos: login, adição de produtos ao carrinho, checkout e finalização da compra.
 
 🛠️ Tecnologias
+
 Ferramenta	Finalidade
 Playwright	Automação de testes E2E
 Gherkin	Especificação dos cenários (BDD)
 JavaScript Implementação dos passos
 Node.js	Ambiente de execução
 
+
 ✅ Cobertura de testes
+
 🔐 Login
 ID	Cenário	Tipo
 CT-001	Login com credenciais válidas	
