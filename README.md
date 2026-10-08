@@ -51,7 +51,10 @@ Node.js	Ambiente de execução
 
 ✅ Cobertura de testes
 
+
+
 🔐 Login
+
 
 ID	Cenário	Tipo
 
@@ -64,13 +67,25 @@ CT-003	Login com campos vazios
 CT-004	Logout após login	
 
 
-🛍️ Compra
+
+Carrinho 🛒
+
 
 ID	Cenário	Tipo
+
 
 CT-005	Adicionar produto ao carrinho	
 
 CT-006	Remover produto do carrinho	
+
+
+
+
+🛍️ Checkout
+
+
+ID	Cenário	Tipo
+
 
 CT-007	Validar o total da compra (itens) 
 
@@ -83,6 +98,17 @@ CT-010	Validar checkout com campos obrigatórios vazios
 CT-011  Validar se ao inserir dados válidos finaliza a compra
 
 CT-012  Validar se é possível retornar para página principal
+
+
+
+Bug 🚨
+
+
+ID	Cenário	Tipo
+
+
+BUG-001 Validar se é possível fazer checkout com carrinho vazio
+
 
 
 👤 Autor
