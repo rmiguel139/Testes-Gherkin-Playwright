@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 // tenta efetuar o checkout com carrinho vazio 
-test('não deve permitir iniciar checkout sem produtos no carrinho',async ({ page }) => {
+test('BUG-001:não deve permitir iniciar checkout sem produtos no carrinho',async ({ page }) => {
 //o teste é esperado como falha, então a suíte continua verde
   test.fail(true);
 // descreve o passo de pré-condição, que é ter o carrinho vazio
