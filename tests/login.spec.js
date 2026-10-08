@@ -32,7 +32,6 @@ test('verifica se é possível efetuar login com credenciais vazias', async ({ p
 })
 
 // verifica se é possivel fazer logout, deve retornar para a página de login
-
 test('verifica se é possivel fazer logout', async ({ page }) => {
   await page.goto('https://www.saucedemo.com');
   await page.locator('input[data-test="username"]').fill('standard_user');
