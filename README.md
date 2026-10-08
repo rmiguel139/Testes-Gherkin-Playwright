@@ -89,7 +89,7 @@ ID	Cenário	Tipo
 
 CT-007	Validar o total da compra (itens) 
 
-CT-008	Finalizar compra com dados válidos	
+CT-008	Validar a tentativa de finalizar compra com dados válidos	
 
 CT-009	Validar a tentativa de finalizar a compra com dados inválidos
 
